@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main, premain, staging]
+  push:
+    branches: [main, premain, staging]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version: "24.13.1"
+
+      - name: Install Python raster toolchain
+        run: |
+          python3 -m pip install --quiet --user cairosvg Pillow
+
+      - name: Install npm dependencies
+        working-directory: ts
+        run: npm ci
+
+      - name: Rebuild raster assets (SVG -> PNG / ICO)
+        run: python3 scripts/build-assets.py
+
+      - name: Typecheck
+        working-directory: ts
+        run: npm run typecheck
+
+      - name: Build
+        working-directory: ts
+        run: npm run build
+
+      - name: Pack (dry-run)
+        working-directory: ts
+        run: npm pack --dry-run
