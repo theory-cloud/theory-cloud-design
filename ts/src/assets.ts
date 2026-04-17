@@ -32,6 +32,15 @@ export const iconMonoLightPath = join(assetsRoot, "icon-mono-light.svg");
 /** Monochrome icon, Graphite on transparent (for light surfaces). */
 export const iconMonoDarkPath = join(assetsRoot, "icon-mono-dark.svg");
 
+/**
+ * Primary horizontal wordmark lockup — icon + "Theory Cloud" set in
+ * Graphite, with the icon rendered in the Core Blue → Violet Signal
+ * gradient. Use for masthead, documentation covers, and any surface
+ * where the full brand expression is appropriate. On constrained
+ * surfaces (favicons, small UI chrome), prefer `iconPath`.
+ */
+export const wordmarkPath = join(assetsRoot, "wordmark-theory-cloud.svg");
+
 /** Multi-resolution ICO bundle (16 / 32 / 48 px). */
 export const faviconIcoPath = join(assetsRoot, "favicon.ico");
 
@@ -61,6 +70,7 @@ export const theoryCloudAssets = {
   icon: iconPath,
   iconMonoLight: iconMonoLightPath,
   iconMonoDark: iconMonoDarkPath,
+  wordmark: wordmarkPath,
   faviconIco: faviconIcoPath,
   faviconPngs: faviconPngPaths,
   ogCardSvg: ogCardSvgPath,
