@@ -1,6 +1,6 @@
 {
   "name": "@theory-cloud/design",
-  "version": "2.0.0-rc.1",
+  "version": "2.0.0-rc.2",
   "description": "Theory Cloud brand pack — populated design tokens (Core / MCP / Auth) and icon assets for FaceTheory-based applications.",
   "license": "UNLICENSED",
   "private": false,
