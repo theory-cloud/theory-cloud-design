@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Theory Cloud">
+  <title>Theory Cloud (monochrome, light on dark)</title>
+  <!--
+    Monochrome light-on-dark variant.
+
+    Brand-doc §27.E Monochrome rules: "Maintain approved one-color
+    versions in pure white, graphite/near-black, single dark brand tone."
+    This variant is the pure-white version, drawn in Ice White on a
+    transparent ground so it reads against Midnight, black, or other
+    controlled dark surfaces (§27.E Background control).
+
+    The rounded container is omitted — the internal geometry carries
+    the mark at 16 px minimum. §4 "slightly rounded, never cartoonish"
+    is preserved via the 1.5 px rectangle radii and 2.75 px stroke caps.
+  -->
+  <g fill="#F4F8FF">
+    <rect x="11" y="11" width="18" height="8" rx="1.5"/>
+    <rect x="11" y="22" width="18" height="13" rx="1.5"/>
+    <rect x="11" y="38" width="18" height="15" rx="1.5"/>
+  </g>
+  <g fill="none" stroke="#F4F8FF" stroke-linecap="round" stroke-width="2.75">
+    <path d="M53 32 A21 21 0 0 1 32 53"/>
+    <path d="M45 32 A13 13 0 0 1 32 45"/>
+    <path d="M37 32 A5 5 0 0 1 32 37"/>
+  </g>
+  <circle cx="32" cy="32" r="1.25" fill="#F4F8FF"/>
+</svg>
