@@ -50,7 +50,8 @@
     "./assets": {
       "types": "./dist/assets.d.ts",
       "import": "./dist/assets.js"
-    }
+    },
+    "./assets/*": "./dist/assets/*"
   },
   "scripts": {
     "build": "tsc && node scripts/copy-assets.mjs",
