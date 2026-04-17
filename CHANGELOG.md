@@ -7,6 +7,19 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.0.0](https://github.com/theory-cloud/theory-cloud-design/compare/v1.0.0...v2.0.0) (2026-04-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **assets:** the primary Theory Cloud mark geometry, the monochrome variants, the favicon set, and the OG card all change visibly. Every consumer app (FaceTheory, autheory, theory-mcp-server) will render a different brand surface when it re-pins the next `@theory-cloud/design` release.
+* **deps:** the peer-dependency range no longer accepts FaceTheory 0.5.x. Consumer apps (FaceTheory itself, autheory, theory-mcp-server) must install `theory-cloud-facetheory-0.6.0.tgz` (or any newer `^0.6.0`) alongside the next `@theory-cloud/design` release tarball.
+
+### Features
+
+* **assets:** adopt new Theory Cloud mark and wordmark lockup ([585c72e](https://github.com/theory-cloud/theory-cloud-design/commit/585c72e2c0020a55b80cbb758a62575356d6e3d5))
+* **deps:** bump @theory-cloud/facetheory peer to ^0.6.0 ([7e730d2](https://github.com/theory-cloud/theory-cloud-design/commit/7e730d21805c75f7e12908a2cd83216ef08492c2))
+
 ## [2.0.0-rc](https://github.com/theory-cloud/theory-cloud-design/compare/v1.0.0...v2.0.0-rc) (2026-04-17)
 
 
