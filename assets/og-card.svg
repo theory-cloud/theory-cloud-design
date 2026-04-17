@@ -6,15 +6,25 @@
       §27.C Color Standards — Midnight ground; gradient reserved for
         launch / hero moments, which an OG card qualifies as.
       §11 UI / Product Styling Guidance — modular rectangular segmentation
-        with one curved highlight. The bottom-right orbital arc is the
-        single curved gesture; the rest of the composition is orthogonal.
+        with one curved highlight. The orbital motif is the single
+        curved gesture; the rest of the composition is orthogonal.
 
-    Layout (1200 × 630):
-      - Left 60 %   — icon + wordmark on a Midnight ground.
-      - Right 40 %  — restrained orbital arc in the Core Blue → Violet
-                      Signal gradient, echoing the mark's own geometry.
-      - No tagline — marketing headlines are owned by the surface
-        product owners, not by the brand pack.
+    Composition (1200 × 630):
+      - Midnight ground across the full card.
+      - Master icon centered-left at 320 × 320 — the canonical 64-unit
+        icon inside a `transform="translate(...) scale(5)"` wrapper so
+        every radius, fill-opacity, and stroke-width is exactly what
+        the primary icon uses. No hand-scaled stroke widths; the
+        transform does the work.
+      - Right-side orbital accent — three concentric quarter arcs in
+        the Core Blue → Violet Signal gradient, at a larger scale than
+        the icon's internal arcs, echoing the same geometry motif.
+      - No wordmark text. v0.1.0 does not ship a custom
+        "Adjusted Neutral Sans" wordmark asset (§23, §25); rendering
+        the wordmark via a system-font fallback would be an
+        approximation that drifts between renderers and breaks the
+        raster-parity gate. The wordmark returns as a vector asset
+        once it is locked.
   -->
   <defs>
     <linearGradient id="og-accent" x1="0" y1="0" x2="1" y2="1">
@@ -35,43 +45,30 @@
   <rect x="0" y="0" width="1200" height="630" fill="#081226"/>
 
   <!-- Right-side orbital accent: three concentric quarter arcs,
-       centered at (1080, 520), echoing the icon's right-side motif.
-       Stroke uses the Core Blue → Violet Signal gradient. -->
-  <g fill="none" stroke="url(#og-accent)" stroke-linecap="round">
-    <path d="M1380 520 A300 300 0 0 1 1080 820" stroke-width="6" stroke-opacity="0.55"/>
-    <path d="M1290 520 A210 210 0 0 1 1080 730" stroke-width="6" stroke-opacity="0.75"/>
-    <path d="M1200 520 A120 120 0 0 1 1080 640" stroke-width="6" stroke-opacity="1"/>
+       centered at (1080, 520). Larger-radius variant of the icon's
+       own internal arcs — same geometric language, bigger scale. -->
+  <g fill="none" stroke="url(#og-accent)" stroke-linecap="round" stroke-width="6">
+    <path d="M1380 520 A300 300 0 0 1 1080 820" stroke-opacity="0.55"/>
+    <path d="M1290 520 A210 210 0 0 1 1080 730" stroke-opacity="0.75"/>
+    <path d="M1200 520 A120 120 0 0 1 1080 640"/>
   </g>
 
-  <!-- Master icon, rendered from the canonical geometry at 180 × 180,
-       positioned at (100, 225) — vertically centered on 630 and
-       horizontally anchored to the 100 px left margin. Inline rather
-       than <image> so the card is a single self-contained SVG. -->
-  <g transform="translate(100 225)">
-    <rect x="0" y="0" width="180" height="180" rx="39.375" ry="39.375" fill="url(#og-icon-bg)"/>
-    <g fill="url(#og-icon-inner)" transform="translate(0 0) scale(2.8125)">
+  <!-- Master icon at 320 × 320, positioned at (180, 155) — vertically
+       centered on 630 and anchored with a generous 180 px left margin.
+       Geometry is the canonical 64-unit icon scaled ×5; every radius
+       and stroke-width is inherited directly from the primary icon. -->
+  <g transform="translate(180 155) scale(5)">
+    <rect x="0" y="0" width="64" height="64" rx="14" ry="14" fill="url(#og-icon-bg)"/>
+    <g fill="url(#og-icon-inner)">
       <rect x="11" y="11"  width="18" height="8"  rx="1.5"/>
       <rect x="11" y="22"  width="18" height="13" rx="1.5" fill-opacity="0.78"/>
       <rect x="11" y="38"  width="18" height="15" rx="1.5" fill-opacity="0.55"/>
     </g>
-    <g fill="none" stroke="#F4F8FF" stroke-linecap="round" stroke-width="7.734" transform="scale(2.8125)">
+    <g fill="none" stroke="#F4F8FF" stroke-linecap="round" stroke-width="2.75">
       <path d="M53 32 A21 21 0 0 1 32 53"/>
       <path d="M45 32 A13 13 0 0 1 32 45" stroke-opacity="0.78"/>
       <path d="M37 32 A5 5 0 0 1 32 37"   stroke-opacity="0.55"/>
     </g>
-    <circle cx="90" cy="90" r="3.516" fill="#F4F8FF"/>
+    <circle cx="32" cy="32" r="1.25" fill="#F4F8FF"/>
   </g>
-
-  <!-- Wordmark: "Theory Cloud" in Ice White, rendered with a generous
-       tracking and medium weight per §27.D Typography Standards.
-       Using a system sans fallback stack because the Adjusted Neutral
-       Sans wordmark direction is not shipped as a font in v0.1.0. -->
-  <text
-    x="330" y="345"
-    fill="#F4F8FF"
-    font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
-    font-size="88"
-    font-weight="600"
-    letter-spacing="-1.5"
-  >Theory Cloud</text>
 </svg>
