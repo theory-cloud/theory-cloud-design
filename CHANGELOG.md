@@ -7,6 +7,20 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.0.0-rc.1](https://github.com/theory-cloud/theory-cloud-design/compare/v2.0.0-rc...v2.0.0-rc.1) (2026-04-17)
+
+
+### Features
+
+* **pkg:** expose raw brand assets via wildcard exports subpath ([d08ff49](https://github.com/theory-cloud/theory-cloud-design/commit/d08ff496fdafd349d3c260c35dbc1f94d74035a4))
+* **pkg:** expose raw brand assets via wildcard exports subpath ([2c349b7](https://github.com/theory-cloud/theory-cloud-design/commit/2c349b710177165505a72a28e63884552d8e5968))
+
+
+### Bug Fixes
+
+* **ci:** drop developer-editable files from release-pr paths-ignore ([3bbda67](https://github.com/theory-cloud/theory-cloud-design/commit/3bbda67864391c37377ed2637179623cf25a9221))
+* **ci:** drop developer-editable files from release-pr paths-ignore ([dcaa2b7](https://github.com/theory-cloud/theory-cloud-design/commit/dcaa2b7f38e48d2f97234dca7a47eb4b4b39ed5b))
+
 ## [2.0.0-rc](https://github.com/theory-cloud/theory-cloud-design/compare/v1.0.0...v2.0.0-rc) (2026-04-17)
 
 
