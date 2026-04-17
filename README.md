@@ -21,17 +21,30 @@ It ships as pinned GitHub release tarballs, consumed through
 
 ## Installation
 
-Consumers pin the tarball asset directly from the corresponding GitHub
-release:
+`@theory-cloud/design` peer-depends on `@theory-cloud/facetheory` for
+the `StitchTokenSet` type. Both packages are distributed as pinned
+GitHub-release tarballs — **neither is published to npm** — so peer
+resolution cannot fall back to the public registry. Install both
+tarballs in the same `npm install` invocation so npm can match the
+installed FaceTheory version against the peer range:
 
 ```bash
+export THEORY_CLOUD_FACETHEORY_VERSION=0.5.7
 export THEORY_CLOUD_DESIGN_VERSION=0.0.0 # x-release-please-version
+
 npm install --save-exact \
+  "https://github.com/theory-cloud/FaceTheory/releases/download/v${THEORY_CLOUD_FACETHEORY_VERSION}/theory-cloud-facetheory-${THEORY_CLOUD_FACETHEORY_VERSION}.tgz" \
   "https://github.com/theory-cloud/theory-cloud-design/releases/download/v${THEORY_CLOUD_DESIGN_VERSION}/theory-cloud-design-${THEORY_CLOUD_DESIGN_VERSION}.tgz"
 ```
 
-`@theory-cloud/facetheory` is a peer dependency — consumers install
-both packages side-by-side.
+Running `npm install` on the design tarball alone will fail with
+`E404 @theory-cloud/facetheory` because npm tries to resolve the peer
+from the registry; pass both tarball URLs (or install FaceTheory
+first) to avoid the miss.
+
+The design pack is validated against the FaceTheory version pinned
+above; consumers should bump both tarballs together when they move
+to a newer FaceTheory release.
 
 ## Usage
 
