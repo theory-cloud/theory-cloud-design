@@ -3,13 +3,17 @@ name: Prerelease PR (premain)
 on:
   push:
     branches: ["premain"]
+    # Ignore ONLY files release-please itself writes exclusively, so its
+    # own merge commits don't re-trigger this workflow. Developer-
+    # editable files (README.md, ts/package.json, ts/package-lock.json)
+    # must NOT live here — a commit that touches only those files is a
+    # legitimate release signal and would otherwise be silently skipped
+    # by GitHub Actions' path filter (see theory-cloud-design#12 / #13
+    # postmortem).
     paths-ignore:
       - ".release-please-manifest.premain.json"
       - "CHANGELOG.md"
       - "VERSION"
-      - "README.md"
-      - "ts/package.json"
-      - "ts/package-lock.json"
   workflow_dispatch: {}
 
 permissions:
