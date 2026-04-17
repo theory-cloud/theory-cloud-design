@@ -1,0 +1,70 @@
+{
+  "name": "@theory-cloud/design",
+  "version": "0.0.0",
+  "description": "Theory Cloud brand pack — populated design tokens (Core / MCP / Auth) and icon assets for FaceTheory-based applications.",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theory-cloud/theory-cloud-design.git",
+    "directory": "ts"
+  },
+  "homepage": "https://github.com/theory-cloud/theory-cloud-design",
+  "bugs": {
+    "url": "https://github.com/theory-cloud/theory-cloud-design/issues"
+  },
+  "keywords": [
+    "theory-cloud",
+    "design-tokens",
+    "brand-pack",
+    "facetheory"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tokens": {
+      "types": "./dist/tokens/index.d.ts",
+      "import": "./dist/tokens/index.js"
+    },
+    "./tokens/core": {
+      "types": "./dist/tokens/core.d.ts",
+      "import": "./dist/tokens/core.js"
+    },
+    "./tokens/mcp": {
+      "types": "./dist/tokens/mcp.d.ts",
+      "import": "./dist/tokens/mcp.js"
+    },
+    "./tokens/auth": {
+      "types": "./dist/tokens/auth.d.ts",
+      "import": "./dist/tokens/auth.js"
+    },
+    "./assets": {
+      "types": "./dist/assets.d.ts",
+      "import": "./dist/assets.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc && node scripts/copy-assets.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck",
+    "clean": "rm -rf dist",
+    "prepack": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "@theory-cloud/facetheory": "^0.5.0"
+  },
+  "devDependencies": {
+    "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v0.5.7/theory-cloud-facetheory-0.5.7.tgz",
+    "@types/node": "^24.12.2",
+    "typescript": "^5.6.0"
+  }
+}

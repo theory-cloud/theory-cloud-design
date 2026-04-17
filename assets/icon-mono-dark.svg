@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Theory Cloud">
+  <title>Theory Cloud (monochrome, dark on light)</title>
+  <!--
+    Monochrome dark-on-light variant.
+
+    Brand-doc §27.E Monochrome rules: Graphite #1C2433 is the approved
+    "graphite / near-black" tone. Drawn on a transparent ground so the
+    mark reads against white, Ice White, or controlled neutral surfaces
+    (§27.E Background control).
+
+    Geometry is identical to the light-on-dark variant — no divergent
+    shape; only the fill / stroke color changes.
+  -->
+  <g fill="#1C2433">
+    <rect x="11" y="11" width="18" height="8" rx="1.5"/>
+    <rect x="11" y="22" width="18" height="13" rx="1.5"/>
+    <rect x="11" y="38" width="18" height="15" rx="1.5"/>
+  </g>
+  <g fill="none" stroke="#1C2433" stroke-linecap="round" stroke-width="2.75">
+    <path d="M53 32 A21 21 0 0 1 32 53"/>
+    <path d="M45 32 A13 13 0 0 1 32 45"/>
+    <path d="M37 32 A5 5 0 0 1 32 37"/>
+  </g>
+  <circle cx="32" cy="32" r="1.25" fill="#1C2433"/>
+</svg>
