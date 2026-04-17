@@ -1,6 +1,6 @@
 {
   "name": "@theory-cloud/design",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Theory Cloud brand pack — populated design tokens (Core / MCP / Auth) and icon assets for FaceTheory-based applications.",
   "license": "UNLICENSED",
   "private": false,
@@ -60,10 +60,10 @@
     "prepack": "npm run clean && npm run build"
   },
   "peerDependencies": {
-    "@theory-cloud/facetheory": "^0.5.0"
+    "@theory-cloud/facetheory": "^0.6.0"
   },
   "devDependencies": {
-    "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v0.5.7/theory-cloud-facetheory-0.5.7.tgz",
+    "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v0.6.0/theory-cloud-facetheory-0.6.0.tgz",
     "@types/node": "^24.12.2",
     "typescript": "^5.6.0"
   }
