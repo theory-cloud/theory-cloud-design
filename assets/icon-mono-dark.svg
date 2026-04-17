@@ -5,21 +5,15 @@
 
     Brand-doc §27.E Monochrome rules: Graphite #1C2433 is the approved
     "graphite / near-black" tone. Drawn on a transparent ground so the
-    mark reads against white, Ice White, or controlled neutral surfaces
-    (§27.E Background control).
+    mark reads against white, Ice White, or controlled neutral
+    surfaces.
 
     Geometry is identical to the light-on-dark variant — no divergent
-    shape; only the fill / stroke color changes.
+    shape; only the fill color changes.
   -->
-  <g fill="#1C2433">
-    <rect x="11" y="11" width="18" height="8" rx="1.5"/>
-    <rect x="11" y="22" width="18" height="13" rx="1.5"/>
-    <rect x="11" y="38" width="18" height="15" rx="1.5"/>
+  <g fill="#1C2433" transform="translate(15.006 4) scale(0.2866)">
+    <path d="M118.58,0v115.18H.13C3.65,52.64,55.02,2.51,118.58,0Z"/>
+    <path d="M65.28,125.01v70.09C29.48,190.73,1.46,161.18,0,125.01h65.28Z"/>
+    <path d="M75.1,125.01h43.49s0,26.88,0,26.88c0,24.02-19.47,43.49-43.49,43.49h0s0-70.37,0-70.37Z"/>
   </g>
-  <g fill="none" stroke="#1C2433" stroke-linecap="round" stroke-width="2.75">
-    <path d="M53 32 A21 21 0 0 1 32 53"/>
-    <path d="M45 32 A13 13 0 0 1 32 45"/>
-    <path d="M37 32 A5 5 0 0 1 32 37"/>
-  </g>
-  <circle cx="32" cy="32" r="1.25" fill="#1C2433"/>
 </svg>

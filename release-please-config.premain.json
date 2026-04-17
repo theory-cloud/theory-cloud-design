@@ -2,11 +2,11 @@
   "release-type": "go",
   "include-v-in-tag": true,
   "draft": true,
-  "versioning": "prerelease",
   "prerelease-type": "rc",
   "prerelease": true,
   "packages": {
     ".": {
+      "versioning": "prerelease",
       "extra-files": [
         { "type": "generic", "path": "VERSION" },
         { "type": "json", "path": "ts/package.json", "jsonpath": "$.version" },
