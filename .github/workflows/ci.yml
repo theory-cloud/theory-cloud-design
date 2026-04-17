@@ -21,9 +21,8 @@ jobs:
         with:
           node-version: "24.13.1"
 
-      - name: Install Python raster toolchain
-        run: |
-          python3 -m pip install --quiet --user cairosvg Pillow
+      - name: Install Python raster toolchain (pinned)
+        run: python3 -m pip install --quiet --user -r scripts/requirements.txt
 
       - name: Install npm dependencies
         working-directory: ts
@@ -31,6 +30,14 @@ jobs:
 
       - name: Rebuild raster assets (SVG -> PNG / ICO)
         run: python3 scripts/build-assets.py
+
+      - name: Verify committed rasters match SVG masters
+        run: |
+          if ! git diff --exit-code -- assets/; then
+            echo "::error::Raster assets drifted from SVG masters. Run 'python3 scripts/build-assets.py' locally and commit the regenerated files so the release tarball ships what was reviewed."
+            git diff --stat -- assets/
+            exit 1
+          fi
 
       - name: Typecheck
         working-directory: ts

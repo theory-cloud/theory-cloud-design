@@ -30,9 +30,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Python raster toolchain
+      - name: Install Python raster toolchain (pinned)
         if: steps.release.outputs.release_created == 'true'
-        run: python3 -m pip install --quiet --user cairosvg Pillow
+        run: python3 -m pip install --quiet --user -r scripts/requirements.txt
 
       - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
         if: steps.release.outputs.release_created == 'true'
@@ -47,6 +47,15 @@ jobs:
       - name: Rebuild raster assets (deterministic SVG -> PNG / ICO)
         if: steps.release.outputs.release_created == 'true'
         run: python3 scripts/build-assets.py
+
+      - name: Verify committed rasters match SVG masters
+        if: steps.release.outputs.release_created == 'true'
+        run: |
+          if ! git diff --exit-code -- assets/; then
+            echo "::error::Release aborted: raster assets on this tag diverge from the SVG masters. The release tarball would ship asset bytes that were never reviewed in a PR. Bring assets/ back in sync before re-running the release."
+            git diff --stat -- assets/
+            exit 1
+          fi
 
       - name: Build release tarball
         if: steps.release.outputs.release_created == 'true'
