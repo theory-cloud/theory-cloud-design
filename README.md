@@ -30,7 +30,7 @@ installed FaceTheory version against the peer range:
 
 ```bash
 export THEORY_CLOUD_FACETHEORY_VERSION=3.1.0
-export THEORY_CLOUD_DESIGN_VERSION=2.1.1-rc # x-release-please-version
+export THEORY_CLOUD_DESIGN_VERSION=2.1.1 # x-release-please-version
 
 npm install --save-exact \
   "https://github.com/theory-cloud/FaceTheory/releases/download/v${THEORY_CLOUD_FACETHEORY_VERSION}/theory-cloud-facetheory-${THEORY_CLOUD_FACETHEORY_VERSION}.tgz" \
@@ -153,7 +153,9 @@ configuration keeps every standard Conventional Commit type visible:
 
 Release-please generated release commits are the exception: they update
 version files, tags, and release notes for the version already being cut;
-they are not a separate product change that needs a second release.
+they are not a separate product change that needs a second release. The
+release PR title pattern therefore uses the reserved `release(...)` type
+rather than a visible product-change type such as `chore(...)`.
 
 Each release uploads one asset:
 
