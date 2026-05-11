@@ -143,12 +143,17 @@ assets are never overwritten. The pipeline refuses to re-upload to an
 already-published release — any change requires a new version moving
 through the pipeline.
 
-Conventional Commits drive the version bump:
+Conventional Commits drive the version bump. In this repo every
+merged change is intended to publish, so the release-please changelog
+configuration keeps every standard Conventional Commit type visible:
 
 - `feat:` → minor
-- `fix:` → patch
+- `fix:`, `docs:`, `chore:`, `refactor:`, `style:`, `test:`, `build:`, `ci:`, `perf:`, `revert:` → patch unless a higher-priority commit is present
 - `feat!:` / `fix!:` / `BREAKING CHANGE:` → major (pre-1.0 per semver convention)
-- `docs:` / `chore:` / `refactor:` / `style:` / `test:` / `ci:` — no release
+
+Release-please generated release commits are the exception: they update
+version files, tags, and release notes for the version already being cut;
+they are not a separate product change that needs a second release.
 
 Each release uploads one asset:
 
