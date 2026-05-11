@@ -79,5 +79,6 @@
       "type": "test",
       "section": "Tests"
     }
-  ]
+  ],
+  "pull-request-title-pattern": "release${scope}: ${version}"
 }

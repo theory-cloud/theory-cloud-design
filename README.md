@@ -153,7 +153,9 @@ configuration keeps every standard Conventional Commit type visible:
 
 Release-please generated release commits are the exception: they update
 version files, tags, and release notes for the version already being cut;
-they are not a separate product change that needs a second release.
+they are not a separate product change that needs a second release. The
+release PR title pattern therefore uses the reserved `release(...)` type
+rather than a visible product-change type such as `chore(...)`.
 
 Each release uploads one asset:
 
