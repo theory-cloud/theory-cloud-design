@@ -7,6 +7,13 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.2](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1...v2.1.2) (2026-05-11)
+
+
+### Bug Fixes
+
+* **release:** repair release PR workflow guards ([d10a101](https://github.com/theory-cloud/theory-cloud-design/commit/d10a1013ec9ec7430ac550ea6800eb478373fd02))
+
 ## [2.1.1](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.0...v2.1.1) (2026-05-11)
 
 
