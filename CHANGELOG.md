@@ -7,6 +7,28 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.2](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1...v2.1.2) (2026-05-11)
+
+
+### Bug Fixes
+
+* **release:** repair release PR workflow guards ([d10a101](https://github.com/theory-cloud/theory-cloud-design/commit/d10a1013ec9ec7430ac550ea6800eb478373fd02))
+
+## [2.1.1](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.0...v2.1.1) (2026-05-11)
+
+
+### Bug Fixes
+
+* **release:** make all commit types release-bearing ([6fcb5bc](https://github.com/theory-cloud/theory-cloud-design/commit/6fcb5bc5a8672c1b65cb888ff5a1f771cb635aef))
+* **release:** stop release PR self-triggers ([3f8981a](https://github.com/theory-cloud/theory-cloud-design/commit/3f8981a9da8e09ee3f6ac1d197a0837773e6e67a))
+
+
+### Maintenance
+
+* **package:** pin FaceTheory v3.0.0 ([0c2272c](https://github.com/theory-cloud/theory-cloud-design/commit/0c2272c1f62cda8638f29bb67f97ded7aac08a24))
+* **package:** pin FaceTheory v3.1.0 ([52c878c](https://github.com/theory-cloud/theory-cloud-design/commit/52c878ccd386c5e3822d58cb928276a021417668))
+* **release:** sync main into staging ([346fcd6](https://github.com/theory-cloud/theory-cloud-design/commit/346fcd6da69e247e50de2640f755483a1380d127))
+
 ## [2.1.1-rc](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.0...v2.1.1-rc) (2026-05-11)
 
 
