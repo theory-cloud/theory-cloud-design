@@ -7,6 +7,29 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.1-rc.1](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1-rc...v2.1.1-rc.1) (2026-05-12)
+
+
+### Bug Fixes
+
+* **release:** repair release PR workflow guards ([d10a101](https://github.com/theory-cloud/theory-cloud-design/commit/d10a1013ec9ec7430ac550ea6800eb478373fd02))
+* **release:** stop release PR self-triggers ([3f8981a](https://github.com/theory-cloud/theory-cloud-design/commit/3f8981a1dbef33b91d1922d41342ae8929a7e204))
+
+
+### Documentation
+
+* **changelog:** clean 2.1.1 release notes ([61050b3](https://github.com/theory-cloud/theory-cloud-design/commit/61050b3e7dc0bb518618aa5a0672896356bca7d4))
+
+
+### Maintenance
+
+* **main:** release 2.1.1 ([d95520a](https://github.com/theory-cloud/theory-cloud-design/commit/d95520ac23d2d0978c221dce24131f47bde215c7))
+* **main:** release 2.1.1 ([f133b55](https://github.com/theory-cloud/theory-cloud-design/commit/f133b5572a145bc2297d597325aa548f2e955c88))
+* **main:** release 2.1.2 ([d892eef](https://github.com/theory-cloud/theory-cloud-design/commit/d892eef3dbf4a9f01b54b1585dfe3e98f1b28fca))
+* **main:** release 2.1.2 ([1e099f1](https://github.com/theory-cloud/theory-cloud-design/commit/1e099f153d0358ed25e8e23055fcf0353e7074bd))
+* **package:** pin FaceTheory v3.1.1 ([c6abf41](https://github.com/theory-cloud/theory-cloud-design/commit/c6abf41457f422bf1a4ba28ea0eb089ed1240d6a))
+* **release:** back-merge main after v2.1.2 ([ece919e](https://github.com/theory-cloud/theory-cloud-design/commit/ece919ed2cd67518e6ebf8fe496bbdd85bdcbc55))
+
 ## [2.1.2](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1...v2.1.2) (2026-05-11)
 
 
