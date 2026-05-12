@@ -61,10 +61,10 @@
     "prepack": "npm run clean && npm run build"
   },
   "peerDependencies": {
-    "@theory-cloud/facetheory": "^3.1.0"
+    "@theory-cloud/facetheory": "^3.1.1"
   },
   "devDependencies": {
-    "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v3.1.0/theory-cloud-facetheory-3.1.0.tgz",
+    "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v3.1.1/theory-cloud-facetheory-3.1.1.tgz",
     "@types/node": "^24.12.2",
     "typescript": "^5.6.0"
   }
