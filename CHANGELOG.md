@@ -7,6 +7,13 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.5](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.4...v2.1.5) (2026-05-18)
+
+
+### Maintenance
+
+* **package:** pin FaceTheory v3.2.2 ([3cb867f](https://github.com/theory-cloud/theory-cloud-design/commit/3cb867f49a8df23d708bfd219061e056b03e6940))
+
 ## [2.1.4](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.3...v2.1.4) (2026-05-16)
 
 
