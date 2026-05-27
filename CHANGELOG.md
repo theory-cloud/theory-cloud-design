@@ -7,6 +7,28 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.1-rc.4](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1-rc.3...v2.1.1-rc.4) (2026-05-27)
+
+
+### Maintenance
+
+* **main:** release 2.1.5 ([56c2a5b](https://github.com/theory-cloud/theory-cloud-design/commit/56c2a5b4e0c107b62cdddcb0f06665bf9a6fa6e1))
+* **package:** pin FaceTheory v3.4.1 ([16bdc96](https://github.com/theory-cloud/theory-cloud-design/commit/16bdc96ab7f6fa36f668661071d8916d76739a63))
+* **package:** pin FaceTheory v3.4.1 ([e82b78f](https://github.com/theory-cloud/theory-cloud-design/commit/e82b78f911efa4b6d774e73156b73323b7354e2c))
+* **release:** merge staging into premain ([8d13ba7](https://github.com/theory-cloud/theory-cloud-design/commit/8d13ba779d9ac13d09e2cc561aa01d686faf6db1))
+* **release:** promote staging to premain ([cb3cb1d](https://github.com/theory-cloud/theory-cloud-design/commit/cb3cb1d876a664751d8e44e5b1f76f67b6967d70))
+
+## [2.1.1-rc.3](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1-rc.2...v2.1.1-rc.3) (2026-05-23)
+
+
+### Maintenance
+
+* **main:** release 2.1.4 ([b6b833e](https://github.com/theory-cloud/theory-cloud-design/commit/b6b833e8bffbf66e1cb41bbcdec1f506871a443b))
+* **main:** release 2.1.4 ([1bf8433](https://github.com/theory-cloud/theory-cloud-design/commit/1bf84334b105a580dea9bacd57f321a96947ab3a))
+* **package:** pin FaceTheory v3.2.2 ([3cb867f](https://github.com/theory-cloud/theory-cloud-design/commit/3cb867f49a8df23d708bfd219061e056b03e6940))
+* **package:** pin FaceTheory v3.3.0 ([e67575a](https://github.com/theory-cloud/theory-cloud-design/commit/e67575a0dd0b25aa7dbabf91f0009a0656c446a2))
+* **package:** pin FaceTheory v3.3.0 ([93f4302](https://github.com/theory-cloud/theory-cloud-design/commit/93f430223d3ba2cafb33f4afabfd7b789dcca368))
+
 ## [2.1.5](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.4...v2.1.5) (2026-05-23)
 
 
