@@ -7,6 +7,18 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.6](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.5...v2.1.6) (2026-05-27)
+
+
+### Maintenance
+
+* **package:** pin FaceTheory v3.4.1 ([16bdc96](https://github.com/theory-cloud/theory-cloud-design/commit/16bdc96ab7f6fa36f668661071d8916d76739a63))
+* **package:** pin FaceTheory v3.4.1 ([e82b78f](https://github.com/theory-cloud/theory-cloud-design/commit/e82b78f911efa4b6d774e73156b73323b7354e2c))
+* **premain:** release 2.1.1-rc.4 ([67cd25c](https://github.com/theory-cloud/theory-cloud-design/commit/67cd25c3bec7bc4307a34dd943acc782031fdd11))
+* **premain:** release 2.1.1-rc.4 ([1e668d0](https://github.com/theory-cloud/theory-cloud-design/commit/1e668d0a55c9516033c44a184a0a1ca642b6c157))
+* **release:** merge staging into premain ([8d13ba7](https://github.com/theory-cloud/theory-cloud-design/commit/8d13ba779d9ac13d09e2cc561aa01d686faf6db1))
+* **release:** promote staging to premain ([cb3cb1d](https://github.com/theory-cloud/theory-cloud-design/commit/cb3cb1d876a664751d8e44e5b1f76f67b6967d70))
+
 ## [2.1.1-rc.4](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1-rc.3...v2.1.1-rc.4) (2026-05-27)
 
 
