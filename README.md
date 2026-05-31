@@ -29,7 +29,7 @@ tarballs in the same `npm install` invocation so npm can match the
 installed FaceTheory version against the peer range:
 
 ```bash
-export THEORY_CLOUD_FACETHEORY_VERSION=3.4.1
+export THEORY_CLOUD_FACETHEORY_VERSION=3.4.4
 export THEORY_CLOUD_DESIGN_VERSION=2.1.6 # x-release-please-version
 
 npm install --save-exact \
