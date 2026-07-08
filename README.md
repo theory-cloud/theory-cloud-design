@@ -21,30 +21,32 @@ It ships as pinned GitHub release tarballs, consumed through
 
 ## Installation
 
-`@theory-cloud/design` peer-depends on `@theory-cloud/facetheory` for
-the `StitchTokenSet` type. Both packages are distributed as pinned
-GitHub-release tarballs — **neither is published to npm** — so peer
-resolution cannot fall back to the public registry. Install both
-tarballs in the same `npm install` invocation so npm can match the
-installed FaceTheory version against the peer range:
+`@theory-cloud/design` publishes the Theory Cloud token values and brand
+assets without a runtime or peer dependency on FaceTheory. The tokens are
+validated in this repo against FaceTheory's `StitchTokenSet` contract,
+but consumers do not need to update the design pack just because
+FaceTheory ships a new release.
 
 ```bash
-export THEORY_CLOUD_FACETHEORY_VERSION=3.4.4
 export THEORY_CLOUD_DESIGN_VERSION=2.1.7 # x-release-please-version
 
 npm install --save-exact \
-  "https://github.com/theory-cloud/FaceTheory/releases/download/v${THEORY_CLOUD_FACETHEORY_VERSION}/theory-cloud-facetheory-${THEORY_CLOUD_FACETHEORY_VERSION}.tgz" \
   "https://github.com/theory-cloud/theory-cloud-design/releases/download/v${THEORY_CLOUD_DESIGN_VERSION}/theory-cloud-design-${THEORY_CLOUD_DESIGN_VERSION}.tgz"
 ```
 
-Running `npm install` on the design tarball alone will fail with
-`E404 @theory-cloud/facetheory` because npm tries to resolve the peer
-from the registry; pass both tarball URLs (or install FaceTheory
-first) to avoid the miss.
+FaceTheory-based applications still pin FaceTheory directly because
+their shell primitives live there:
 
-The design pack is validated against the FaceTheory version pinned
-above; consumers should bump both tarballs together when they move
-to a newer FaceTheory release.
+```bash
+export THEORY_CLOUD_FACETHEORY_VERSION=4.0.0
+
+npm install --save-exact \
+  "https://github.com/theory-cloud/FaceTheory/releases/download/v${THEORY_CLOUD_FACETHEORY_VERSION}/theory-cloud-facetheory-${THEORY_CLOUD_FACETHEORY_VERSION}.tgz"
+```
+
+The design pack's dev dependency pins the latest validated FaceTheory
+baseline for contract checks. That pin is a validation input, not a
+deployment-cadence lock.
 
 ## Usage
 

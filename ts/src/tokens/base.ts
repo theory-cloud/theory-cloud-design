@@ -22,13 +22,13 @@
  * Dark-first (§11, §29.B) is enforced here by `mode: "dark"`; v1 does not
  * ship a light-mode variant.
  *
- * This module's type contract is the `StitchTokenSet` shape published by
- * `@theory-cloud/facetheory` (the Material-3-shaped palette used by every
- * FaceTheory-based shell). The brand pack is the Theory Cloud *instance*
- * of that primitive; FaceTheory stays brand-agnostic on purpose.
+ * This module's published type is local to the brand pack so installation
+ * does not force a FaceTheory pin. Compatibility with the `StitchTokenSet`
+ * shape from `@theory-cloud/facetheory` is enforced by the contract
+ * typecheck in `contracts/facetheory-stitch-token-set.ts`.
  */
 
-import type { StitchTokenSet } from "@theory-cloud/facetheory/stitch-tokens";
+import type { TheoryCloudTokenSet } from "./types.js";
 
 /* ---------------------------------------------------------------------------
  * Brand hex locks (§27.C).
@@ -167,7 +167,7 @@ const baseSpacingUnit = 4;
  * The base token set.
  * ------------------------------------------------------------------------ */
 
-export const theoryCloudBaseTokens: StitchTokenSet = {
+export const theoryCloudBaseTokens: TheoryCloudTokenSet = {
   mode: "dark",
   palette: {
     // Primary — Core Blue (§29.F: shared identity; surfaces re-weight only).
