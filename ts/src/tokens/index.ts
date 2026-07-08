@@ -31,3 +31,12 @@ export {
 export { theoryCloudCoreTokens } from "./core.js";
 export { theoryCloudMcpTokens } from "./mcp.js";
 export { theoryCloudAuthTokens } from "./auth.js";
+
+export type {
+  TheoryCloudColorValue,
+  TheoryCloudPaletteTokens,
+  TheoryCloudTypographyTokens,
+  TheoryCloudRoundnessTokens,
+  TheoryCloudSpacingTokens,
+  TheoryCloudTokenSet,
+} from "./types.js";

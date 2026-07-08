@@ -18,10 +18,11 @@
  *
  *   import { iconPath } from "@theory-cloud/design/assets";
  *
- * The tokens are shape-compatible with `StitchTokenSet` from
- * `@theory-cloud/facetheory/stitch-tokens` — this package is the Theory
- * Cloud instance of that brand-agnostic primitive (FaceTheory does not
- * depend on this package; only consumer apps do).
+ * The tokens publish a local structural contract and are validated against
+ * `StitchTokenSet` from `@theory-cloud/facetheory/stitch-tokens` during
+ * package checks. This package is the Theory Cloud instance of that
+ * brand-agnostic primitive without forcing a FaceTheory install for every
+ * design-pack consumer.
  */
 
 export {
@@ -37,6 +38,12 @@ export {
   brandMist,
   brandGraphite,
   brandPhiGold,
+  type TheoryCloudColorValue,
+  type TheoryCloudPaletteTokens,
+  type TheoryCloudTypographyTokens,
+  type TheoryCloudRoundnessTokens,
+  type TheoryCloudSpacingTokens,
+  type TheoryCloudTokenSet,
 } from "./tokens/index.js";
 
 export {
