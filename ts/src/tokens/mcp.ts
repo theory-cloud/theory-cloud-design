@@ -21,12 +21,11 @@
  * reads as "active, connected, agentic" within the shared system.
  */
 
-import type { StitchTokenSet } from "@theory-cloud/facetheory/stitch-tokens";
-
 import {
   brandVioletSignal,
   theoryCloudBaseTokens,
 } from "./base.js";
+import type { TheoryCloudTokenSet } from "./types.js";
 
 /**
  * Violet Signal inverted — for light-on-dark quotes of the secondary
@@ -35,7 +34,7 @@ import {
  */
 const violetSignalInverse = "#5A3FDB";
 
-export const theoryCloudMcpTokens: StitchTokenSet = {
+export const theoryCloudMcpTokens: TheoryCloudTokenSet = {
   ...theoryCloudBaseTokens,
   palette: {
     ...theoryCloudBaseTokens.palette,

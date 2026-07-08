@@ -24,14 +24,13 @@
  * not ship a light-mode variant.
  */
 
-import type { StitchTokenSet } from "@theory-cloud/facetheory/stitch-tokens";
-
 import {
   brandSteel,
   theoryCloudBaseTokens,
 } from "./base.js";
+import type { TheoryCloudTokenSet } from "./types.js";
 
-export const theoryCloudAuthTokens: StitchTokenSet = {
+export const theoryCloudAuthTokens: TheoryCloudTokenSet = {
   ...theoryCloudBaseTokens,
   palette: {
     ...theoryCloudBaseTokens.palette,

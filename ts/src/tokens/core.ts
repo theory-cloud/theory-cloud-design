@@ -20,11 +20,10 @@
  * not a token addition.
  */
 
-import type { StitchTokenSet } from "@theory-cloud/facetheory/stitch-tokens";
-
 import { theoryCloudBaseTokens } from "./base.js";
+import type { TheoryCloudTokenSet } from "./types.js";
 
-export const theoryCloudCoreTokens: StitchTokenSet = {
+export const theoryCloudCoreTokens: TheoryCloudTokenSet = {
   ...theoryCloudBaseTokens,
   palette: {
     ...theoryCloudBaseTokens.palette,
