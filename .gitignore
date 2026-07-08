@@ -1,3 +1,5 @@
 .claude/
 .codex/
 .mcp.json
+.agents/
+GEMINI.md
