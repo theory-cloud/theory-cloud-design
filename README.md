@@ -28,7 +28,7 @@ but consumers do not need to update the design pack just because
 FaceTheory ships a new release.
 
 ```bash
-export THEORY_CLOUD_DESIGN_VERSION=2.1.7 # x-release-please-version
+export THEORY_CLOUD_DESIGN_VERSION=2.1.1-rc.6 # x-release-please-version
 
 npm install --save-exact \
   "https://github.com/theory-cloud/theory-cloud-design/releases/download/v${THEORY_CLOUD_DESIGN_VERSION}/theory-cloud-design-${THEORY_CLOUD_DESIGN_VERSION}.tgz"
