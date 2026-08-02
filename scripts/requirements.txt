@@ -5,4 +5,4 @@
 # stays stable across runs. Bump both packages intentionally in a
 # scoped commit; drift here can produce spurious parity failures.
 cairosvg==2.9.0
-Pillow==12.2.0
+Pillow==12.3.0
