@@ -62,7 +62,7 @@
     "prepack": "npm run clean && npm run build"
   },
   "devDependencies": {
-    "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v4.0.0/theory-cloud-facetheory-4.0.0.tgz",
+    "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v4.0.5/theory-cloud-facetheory-4.0.5.tgz",
     "@types/node": "^24.12.2",
     "typescript": "^5.6.0"
   }
