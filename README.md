@@ -48,6 +48,11 @@ The design pack's dev dependency pins the latest validated FaceTheory
 baseline for contract checks. That pin is a validation input, not a
 deployment-cadence lock.
 
+`ts/.npmrc` sets npm's `allow-remote=root` policy for npm 12 compatibility
+(npm 12 defaults to `allow-remote=none` and refuses URL dependencies).
+That is intentionally narrower than `all`: only the pinned URL
+dependencies declared by `ts/package.json` may be fetched.
+
 ## Usage
 
 ```ts
