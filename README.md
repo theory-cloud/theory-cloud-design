@@ -28,7 +28,7 @@ but consumers do not need to update the design pack just because
 FaceTheory ships a new release.
 
 ```bash
-export THEORY_CLOUD_DESIGN_VERSION=2.1.8 # x-release-please-version
+export THEORY_CLOUD_DESIGN_VERSION=2.1.1-rc.7 # x-release-please-version
 
 npm install --save-exact \
   "https://github.com/theory-cloud/theory-cloud-design/releases/download/v${THEORY_CLOUD_DESIGN_VERSION}/theory-cloud-design-${THEORY_CLOUD_DESIGN_VERSION}.tgz"
@@ -38,7 +38,7 @@ FaceTheory-based applications still pin FaceTheory directly because
 their shell primitives live there:
 
 ```bash
-export THEORY_CLOUD_FACETHEORY_VERSION=4.0.0
+export THEORY_CLOUD_FACETHEORY_VERSION=4.0.5
 
 npm install --save-exact \
   "https://github.com/theory-cloud/FaceTheory/releases/download/v${THEORY_CLOUD_FACETHEORY_VERSION}/theory-cloud-facetheory-${THEORY_CLOUD_FACETHEORY_VERSION}.tgz"
@@ -47,6 +47,11 @@ npm install --save-exact \
 The design pack's dev dependency pins the latest validated FaceTheory
 baseline for contract checks. That pin is a validation input, not a
 deployment-cadence lock.
+
+`ts/.npmrc` sets npm's `allow-remote=root` policy for npm 12 compatibility
+(npm 12 defaults to `allow-remote=none` and refuses URL dependencies).
+That is intentionally narrower than `all`: only the pinned URL
+dependencies declared by `ts/package.json` may be fetched.
 
 ## Usage
 
