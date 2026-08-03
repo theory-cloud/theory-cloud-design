@@ -7,6 +7,23 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.1-rc.7](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1-rc.6...v2.1.1-rc.7) (2026-08-03)
+
+
+### Bug Fixes
+
+* **deps:** adopt FaceTheory v4.0.5 ([8bc1ff2](https://github.com/theory-cloud/theory-cloud-design/commit/8bc1ff276daf32566a28504ac33456e5ace1fa18))
+* **deps:** adopt FaceTheory v4.0.5 ([b7d0198](https://github.com/theory-cloud/theory-cloud-design/commit/b7d0198439b41b55d239c657a2dae7b9960876d9))
+* **deps:** bump Pillow to patched 12.3.0 ([ae8f447](https://github.com/theory-cloud/theory-cloud-design/commit/ae8f44798cec6a851706604ce3aa51dfe94be62d))
+* **deps:** refresh audited dependency resolutions ([f52ff8c](https://github.com/theory-cloud/theory-cloud-design/commit/f52ff8c1da2fc75c4662727ee8b965ece24ed779))
+* **deps:** resolve high-severity dependabot findings ([c200ecf](https://github.com/theory-cloud/theory-cloud-design/commit/c200ecfe0e99ce64b264385f07a801b8bc456efb))
+
+
+### Maintenance
+
+* **ts:** commit allow-remote=root npmrc for npm 12 (THE-2805) ([a08a0e9](https://github.com/theory-cloud/theory-cloud-design/commit/a08a0e9b3abe48811238974cf5a0448f2078183d))
+* **ts:** commit allow-remote=root npmrc for npm 12 (THE-2805) ([ece2979](https://github.com/theory-cloud/theory-cloud-design/commit/ece297991d56ee6ae544a3cba8b398cbcb576d05))
+
 ## [2.1.1-rc.6](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1-rc.5...v2.1.1-rc.6) (2026-07-08)
 
 
