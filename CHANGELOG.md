@@ -7,6 +7,14 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.1.8](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.7...v2.1.8) (2026-07-08)
+
+
+### Bug Fixes
+
+* **package:** decouple FaceTheory validation ([b87a456](https://github.com/theory-cloud/theory-cloud-design/commit/b87a4561e24e32a7bb602a3241c5c946390bb207))
+* **package:** decouple FaceTheory validation ([37e13c6](https://github.com/theory-cloud/theory-cloud-design/commit/37e13c687665a1c2980a947bb55cb346f266781d))
+
 ## [2.1.7](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.6...v2.1.7) (2026-05-31)
 
 
