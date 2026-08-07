@@ -38,7 +38,7 @@ FaceTheory-based applications still pin FaceTheory directly because
 their shell primitives live there:
 
 ```bash
-export THEORY_CLOUD_FACETHEORY_VERSION=4.0.5
+export THEORY_CLOUD_FACETHEORY_VERSION=4.0.6
 
 npm install --save-exact \
   "https://github.com/theory-cloud/FaceTheory/releases/download/v${THEORY_CLOUD_FACETHEORY_VERSION}/theory-cloud-facetheory-${THEORY_CLOUD_FACETHEORY_VERSION}.tgz"
