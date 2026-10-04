@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@theory-cloud/facetheory": "https://github.com/theory-cloud/FaceTheory/releases/download/v4.2.0/theory-cloud-facetheory-4.2.0.tgz",
-    "@types/node": "^24.12.2",
+    "@types/node": "^24.19.0",
     "typescript": "^5.6.0"
   }
 }
