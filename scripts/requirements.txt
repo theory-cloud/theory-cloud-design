@@ -1,8 +1,21 @@
 # Python toolchain for `scripts/build-assets.py`.
 #
-# Pinned so CI and release workflows regenerate byte-identical raster
-# outputs and the "committed rasters match SVG masters" parity check
-# stays stable across runs. Bump both packages intentionally in a
-# scoped commit; drift here can produce spurious parity failures.
+# Pinned so the release workflows and the evidence producer regenerate
+# byte-identical raster outputs and the "committed rasters match SVG
+# masters" parity check stays stable across runs. The full resolved set is
+# pinned, not just the two direct dependencies, because the raster bytes
+# depend on the whole chain: the favicon ICO frames are zlib-compressed PNGs,
+# so a toolchain change can change the committed bytes without changing a
+# pixel. Bump deliberately in a scoped commit and re-record the raster gate;
+# drift here shows up as a spurious parity failure.
 cairosvg==2.9.1
 Pillow==13.0.0
+
+# Transitive set, as resolved by pip for the pins above.
+cairocffi==1.7.1
+cffi==2.1.1
+cssselect2==0.10.1
+defusedxml==0.7.1
+pycparser==3.12
+tinycss2==1.5.1
+webencodings==0.6.1
