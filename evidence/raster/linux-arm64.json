@@ -5,13 +5,13 @@
         "python3",
         "scripts/build-assets.py"
       ],
-      "durationSeconds": 0.112,
+      "durationSeconds": 0.138,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-16T03:57:50Z",
+      "finishedAt": "2026-11-16T03:59:38Z",
       "id": "raster-rebuild",
-      "inputsDigest": "sha256:7671e736dfbecf6560e73d32164055cb0faaad585db010a1dd5a51678ba0be95",
-      "startedAt": "2026-11-16T03:57:50Z"
+      "inputsDigest": "sha256:b8ba8f39efacf543973ce7a854eb70ab7dd5a7fcdfca72bf7e8396c5727564f7",
+      "startedAt": "2026-11-16T03:59:38Z"
     },
     {
       "argv": [
@@ -21,13 +21,13 @@
         "--",
         "assets/"
       ],
-      "durationSeconds": 0.001,
+      "durationSeconds": 0.002,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-16T03:57:50Z",
+      "finishedAt": "2026-11-16T03:59:38Z",
       "id": "raster-drift",
-      "inputsDigest": "sha256:c0ced7733fa3d1d95056e55dc33d53e03604a4df901524d37351351133ebff53",
-      "startedAt": "2026-11-16T03:57:50Z"
+      "inputsDigest": "sha256:933186a0ce5a9df103b4ea3272b3fc608d5445405fba093e58bd56ec096f7790",
+      "startedAt": "2026-11-16T03:59:38Z"
     }
   ],
   "consumed": [],
@@ -49,7 +49,7 @@
   },
   "profile": "linux-arm64",
   "reason": "",
-  "recordedAt": "2026-11-16T03:57:50Z",
+  "recordedAt": "2026-11-16T03:59:38Z",
   "releaseOnly": {
     "digest": "sha256:c7c64e61c9be26a47080456d567975b7694f804901ced46875a1b3ec29d57c5a",
     "fileCount": 7,
@@ -59,7 +59,7 @@
   "reviews": [],
   "schemaVersion": 1,
   "scope": {
-    "digest": "sha256:24fe0692968b1188fabb86da5ce97eac95ef98a332904b7c5b8ee8ad94a17335",
+    "digest": "sha256:76a1a53024a5db1528b1994443243abdbfaebf6dc3f593cb3ccd62d17989c17a",
     "fileCount": 14,
     "paths": [
       "assets/",
@@ -69,7 +69,7 @@
     "version": 1
   },
   "source": {
-    "digest": "sha256:7820a20cdaf1fae84ba1271ef82862977997f245ecd550d3c9c4ae1cdc7ecb0d",
+    "digest": "sha256:a30476a0d51f6cdbf9d672f7b378ec306679af0e4996c06db76adec138e73ed1",
     "fileCount": 50
   },
   "verdict": "PASS"
