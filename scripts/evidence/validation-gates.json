@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "evidenceDirectory": "evidence",
+  "proofProfiles": {
+    "linux-arm64": {
+      "description": "Pinned Linux producer for every gate: the node:24-slim image by digest, run arm64 under colima on the steward host, with the raster toolchain pinned by scripts/requirements.txt and libcairo2 from the image's Debian release. No gate is produced on the macOS host, because the favicon ICO frames are zlib-compressed and only the Linux toolchain reproduces the committed bytes.",
+      "environment": {
+        "node": "24",
+        "python": "3.11",
+        "libcairo": "1.16.0",
+        "platform": {
+          "os": "linux",
+          "arch": "arm64"
+        }
+      }
+    }
+  },
+  "nonProductPaths": [
+    ".github/",
+    ".gitignore",
+    "ChatGPT Image *.png",
+    "CHANGELOG.md",
+    "Makefile",
+    "README.md",
+    "release-please-config.json",
+    "release-please-config.premain.json",
+    "scripts/build-release-assets.sh",
+    "scripts/evidence/",
+    "theory_cloud_branding_package.md"
+  ],
+  "releaseOnly": {
+    "exact": [
+      "VERSION",
+      ".release-please-manifest.json",
+      ".release-please-manifest.premain.json",
+      "CHANGELOG.md",
+      "README.md",
+      "ts/package.json",
+      "ts/package-lock.json"
+    ],
+    "prefixes": [],
+    "patterns": []
+  },
+  "hostMetadata": [
+    ".DS_Store",
+    "**/.DS_Store"
+  ],
+  "gates": {
+    "raster": {
+      "kind": "source",
+      "description": "Rebuild every raster asset from its SVG master, then require the working tree to match the committed bytes",
+      "profiles": [
+        "linux-arm64"
+      ],
+      "paths": [
+        "assets/",
+        "scripts/build-assets.py",
+        "scripts/requirements.txt"
+      ],
+      "commands": [
+        {
+          "id": "raster-rebuild",
+          "argv": [
+            "python3",
+            "scripts/build-assets.py"
+          ]
+        },
+        {
+          "id": "raster-drift",
+          "argv": [
+            "git",
+            "diff",
+            "--exit-code",
+            "--",
+            "assets/"
+          ]
+        }
+      ]
+    },
+    "checks": {
+      "kind": "source",
+      "description": "Install from the committed lockfile, then typecheck the package and the FaceTheory StitchTokenSet contract",
+      "profiles": [
+        "linux-arm64"
+      ],
+      "paths": [
+        "ts/"
+      ],
+      "commands": [
+        {
+          "id": "install",
+          "argv": [
+            "npm",
+            "ci"
+          ],
+          "cwd": "ts"
+        },
+        {
+          "id": "check",
+          "argv": [
+            "npm",
+            "run",
+            "check"
+          ],
+          "cwd": "ts"
+        }
+      ]
+    },
+    "package": {
+      "kind": "source",
+      "description": "Compile and stage the assets into dist, then exercise the published tarball contents",
+      "profiles": [
+        "linux-arm64"
+      ],
+      "paths": [
+        "ts/",
+        "assets/"
+      ],
+      "commands": [
+        {
+          "id": "build",
+          "argv": [
+            "npm",
+            "run",
+            "build"
+          ],
+          "cwd": "ts"
+        },
+        {
+          "id": "pack",
+          "argv": [
+            "npm",
+            "pack",
+            "--dry-run"
+          ],
+          "cwd": "ts"
+        }
+      ]
+    },
+    "rubric": {
+      "kind": "source",
+      "description": "Catch-all gate: the full local gate set for the staging pull request. Its scope is every tracked path, so an edit to the evidence tooling, the registry, the workflows or this repository's documentation stales the record and forces a fresh local run. It executes no command of its own; it composes the records of the gates it depends on.",
+      "profiles": [
+        "linux-arm64"
+      ],
+      "paths": [
+        "**"
+      ],
+      "dependsOn": [
+        "raster",
+        "checks",
+        "package"
+      ],
+      "commands": []
+    }
+  }
+}

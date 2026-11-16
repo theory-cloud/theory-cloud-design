@@ -119,9 +119,16 @@ make install     # npm ci inside ts/
 make assets      # regenerate raster assets from SVG masters
 make build       # tsc + stage assets into ts/dist/
 make typecheck   # tsc --noEmit
-make check       # typecheck (placeholder for lint + tests)
+make check       # typecheck + the FaceTheory StitchTokenSet contract typecheck
 make pack        # npm pack --dry-run inside ts/
+make rubric      # produce the evidence records in the pinned Linux producer
+make verify-evidence   # verify the committed records (what CI runs)
 ```
+
+Gates are verified once, locally, on the pull request into `staging`:
+`make rubric` writes the records under `evidence/`, and CI only re-derives
+their input digests, so a stale or missing record fails with "produce evidence
+locally". See `scripts/evidence/README.md`.
 
 The raster pipeline uses `cairosvg` and `Pillow` (Python). SVG stays
 the authoring format; rasters are always regenerated from the vector
