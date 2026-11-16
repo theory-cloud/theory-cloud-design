@@ -1,0 +1,74 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "npm",
+        "ci"
+      ],
+      "cwd": "ts",
+      "durationSeconds": 0.625,
+      "executed": true,
+      "exitCode": 0,
+      "finishedAt": "2026-11-16T03:57:51Z",
+      "id": "install",
+      "inputsDigest": "sha256:3e0695c9e64051114c3e35ccd451e52ef5df64456dc736450a30ca62fe5d0dd2",
+      "startedAt": "2026-11-16T03:57:50Z"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "cwd": "ts",
+      "durationSeconds": 0.649,
+      "executed": true,
+      "exitCode": 0,
+      "finishedAt": "2026-11-16T03:57:52Z",
+      "id": "check",
+      "inputsDigest": "sha256:6c1ed47e7791bd7bc1767852a48ed864b75e8fddfbe5fa76cc58af17afe0dd1d",
+      "startedAt": "2026-11-16T03:57:51Z"
+    }
+  ],
+  "consumed": [],
+  "description": "Install from the committed lockfile, then typecheck the package and the FaceTheory StitchTokenSet contract",
+  "environment": {
+    "libcairo": "1.16.0",
+    "node": "v24.22.3",
+    "platform": {
+      "arch": "aarch64",
+      "os": "linux"
+    },
+    "python": "3.11.2"
+  },
+  "gate": "checks",
+  "kind": "source",
+  "producer": {
+    "registry": "validation-gates.json",
+    "tool": "scripts/evidence/validation_evidence.py"
+  },
+  "profile": "linux-arm64",
+  "reason": "",
+  "recordedAt": "2026-11-16T03:57:52Z",
+  "releaseOnly": {
+    "digest": "sha256:c7c64e61c9be26a47080456d567975b7694f804901ced46875a1b3ec29d57c5a",
+    "fileCount": 7,
+    "normalizedDigest": "sha256:9a323d6c9934430e2cd173e7515bcb5350df14e4c2d913ce4445d5e95dcfffaf",
+    "version": "2.1.9"
+  },
+  "reviews": [],
+  "schemaVersion": 1,
+  "scope": {
+    "digest": "sha256:43490280052cacba2f1eddc208543f65d22bd5179a901e924336de585abd67bc",
+    "fileCount": 16,
+    "paths": [
+      "ts/"
+    ],
+    "version": 1
+  },
+  "source": {
+    "digest": "sha256:7820a20cdaf1fae84ba1271ef82862977997f245ecd550d3c9c4ae1cdc7ecb0d",
+    "fileCount": 50
+  },
+  "verdict": "PASS"
+}
