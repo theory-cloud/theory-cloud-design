@@ -1,0 +1,76 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "scripts/build-assets.py"
+      ],
+      "durationSeconds": 0.112,
+      "executed": true,
+      "exitCode": 0,
+      "finishedAt": "2026-11-16T04:02:49Z",
+      "id": "raster-rebuild",
+      "inputsDigest": "sha256:39fb65c355d674262a8f7ce512780d903eabba7cee37ef47c19ce07d7232371c",
+      "startedAt": "2026-11-16T04:02:49Z"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "assets/"
+      ],
+      "durationSeconds": 0.001,
+      "executed": true,
+      "exitCode": 0,
+      "finishedAt": "2026-11-16T04:02:49Z",
+      "id": "raster-drift",
+      "inputsDigest": "sha256:8337dde89358e68e9cdbbe6cd6c02919abcf9940dff442d1d879939b82372c85",
+      "startedAt": "2026-11-16T04:02:49Z"
+    }
+  ],
+  "consumed": [],
+  "description": "Rebuild every raster asset from its SVG master, then require the working tree to match the committed bytes",
+  "environment": {
+    "libcairo": "1.16.0",
+    "node": "v24.22.3",
+    "platform": {
+      "arch": "aarch64",
+      "os": "linux"
+    },
+    "python": "3.11.2"
+  },
+  "gate": "raster",
+  "kind": "source",
+  "producer": {
+    "registry": "validation-gates.json",
+    "tool": "scripts/evidence/validation_evidence.py"
+  },
+  "profile": "linux-arm64",
+  "reason": "",
+  "recordedAt": "2026-11-16T04:02:49Z",
+  "releaseOnly": {
+    "digest": "sha256:c7c64e61c9be26a47080456d567975b7694f804901ced46875a1b3ec29d57c5a",
+    "fileCount": 7,
+    "normalizedDigest": "sha256:9a323d6c9934430e2cd173e7515bcb5350df14e4c2d913ce4445d5e95dcfffaf",
+    "version": "2.1.9"
+  },
+  "reviews": [],
+  "schemaVersion": 1,
+  "scope": {
+    "digest": "sha256:9616120f1cf138cc5342e9023836ad91dd79e3f8cdec1113a8adc870eb333f4c",
+    "fileCount": 14,
+    "paths": [
+      "assets/",
+      "scripts/build-assets.py",
+      "scripts/requirements.txt"
+    ],
+    "version": 1
+  },
+  "source": {
+    "digest": "sha256:8a9a55ef01eccb3eb1381d309364834975bbe052da96b123c7af9e433c9fff23",
+    "fileCount": 50
+  },
+  "verdict": "PASS"
+}
