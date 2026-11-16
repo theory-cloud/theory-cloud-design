@@ -5,13 +5,13 @@
         "python3",
         "scripts/build-assets.py"
       ],
-      "durationSeconds": 0.138,
+      "durationSeconds": 0.112,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-16T03:59:38Z",
+      "finishedAt": "2026-11-16T04:02:49Z",
       "id": "raster-rebuild",
-      "inputsDigest": "sha256:b8ba8f39efacf543973ce7a854eb70ab7dd5a7fcdfca72bf7e8396c5727564f7",
-      "startedAt": "2026-11-16T03:59:38Z"
+      "inputsDigest": "sha256:39fb65c355d674262a8f7ce512780d903eabba7cee37ef47c19ce07d7232371c",
+      "startedAt": "2026-11-16T04:02:49Z"
     },
     {
       "argv": [
@@ -21,13 +21,13 @@
         "--",
         "assets/"
       ],
-      "durationSeconds": 0.002,
+      "durationSeconds": 0.001,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-16T03:59:38Z",
+      "finishedAt": "2026-11-16T04:02:49Z",
       "id": "raster-drift",
-      "inputsDigest": "sha256:933186a0ce5a9df103b4ea3272b3fc608d5445405fba093e58bd56ec096f7790",
-      "startedAt": "2026-11-16T03:59:38Z"
+      "inputsDigest": "sha256:8337dde89358e68e9cdbbe6cd6c02919abcf9940dff442d1d879939b82372c85",
+      "startedAt": "2026-11-16T04:02:49Z"
     }
   ],
   "consumed": [],
@@ -49,7 +49,7 @@
   },
   "profile": "linux-arm64",
   "reason": "",
-  "recordedAt": "2026-11-16T03:59:38Z",
+  "recordedAt": "2026-11-16T04:02:49Z",
   "releaseOnly": {
     "digest": "sha256:c7c64e61c9be26a47080456d567975b7694f804901ced46875a1b3ec29d57c5a",
     "fileCount": 7,
@@ -59,7 +59,7 @@
   "reviews": [],
   "schemaVersion": 1,
   "scope": {
-    "digest": "sha256:76a1a53024a5db1528b1994443243abdbfaebf6dc3f593cb3ccd62d17989c17a",
+    "digest": "sha256:9616120f1cf138cc5342e9023836ad91dd79e3f8cdec1113a8adc870eb333f4c",
     "fileCount": 14,
     "paths": [
       "assets/",
@@ -69,7 +69,7 @@
     "version": 1
   },
   "source": {
-    "digest": "sha256:a30476a0d51f6cdbf9d672f7b378ec306679af0e4996c06db76adec138e73ed1",
+    "digest": "sha256:8a9a55ef01eccb3eb1381d309364834975bbe052da96b123c7af9e433c9fff23",
     "fileCount": 50
   },
   "verdict": "PASS"
