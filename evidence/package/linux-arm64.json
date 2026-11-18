@@ -7,13 +7,13 @@
         "build"
       ],
       "cwd": "ts",
-      "durationSeconds": 0.259,
+      "durationSeconds": 0.255,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-18T01:48:13Z",
+      "finishedAt": "2026-11-18T02:21:09Z",
       "id": "build",
-      "inputsDigest": "sha256:60551d01579aa502472db57c7b5a998e433d55126d06b18e6ca03c388fa887f1",
-      "startedAt": "2026-11-18T01:48:13Z"
+      "inputsDigest": "sha256:5a792a5dc787b683b1f5fbd341f81517abff6fda0252ce09261ebeeebf7cc7eb",
+      "startedAt": "2026-11-18T02:21:09Z"
     },
     {
       "argv": [
@@ -22,13 +22,13 @@
         "--dry-run"
       ],
       "cwd": "ts",
-      "durationSeconds": 0.428,
+      "durationSeconds": 0.406,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-18T01:48:14Z",
+      "finishedAt": "2026-11-18T02:21:10Z",
       "id": "pack",
-      "inputsDigest": "sha256:24617826606c19b55bd15e02f47a147254b45f3ea0651877648d95af1bf59351",
-      "startedAt": "2026-11-18T01:48:13Z"
+      "inputsDigest": "sha256:5a0d6add2fdc0b155473f214246602444de5779ff128a5cae3e73f19ad36368d",
+      "startedAt": "2026-11-18T02:21:09Z"
     }
   ],
   "consumed": [],
@@ -50,17 +50,17 @@
   },
   "profile": "linux-arm64",
   "reason": "",
-  "recordedAt": "2026-11-18T01:48:14Z",
+  "recordedAt": "2026-11-18T02:21:10Z",
   "releaseOnly": {
-    "digest": "sha256:bbe82eb2b5dcdfe95912e8eaed67fb63416fd09c329470b7eeb152791ef1fc47",
+    "digest": "sha256:64631e0586fc906466451db1de3af5933943e1bd639e99adcf40ba814b513071",
     "fileCount": 7,
-    "normalizedDigest": "sha256:070809b5ddc4cafb5173e6b58840f33611b6dccf50cb702e253fcb9e585327ae",
-    "version": "2.1.9"
+    "normalizedDigest": "sha256:0694a6dfd2f031ab8db456db2fa228ac99b01a52348b1b6c4e8f112348eeaeac",
+    "version": "2.2.0"
   },
   "reviews": [],
   "schemaVersion": 1,
   "scope": {
-    "digest": "sha256:33ab76319d3e306f91b962d70cf1b608655c32ccb76ce506a3bfdb2f6ca856ec",
+    "digest": "sha256:88c7cbf774cd20b5a5e1db6e9507177ed6b5aeae8ec3ca7d1c0499387c35663e",
     "fileCount": 28,
     "paths": [
       "ts/",
