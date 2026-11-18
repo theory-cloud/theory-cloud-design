@@ -7,6 +7,86 @@ Conventional Commits on the `staging → premain → main` branch flow.
 Do not hand-edit released sections; add a Conventional Commit and let
 the release pipeline populate the next entry.
 
+## [2.2.0](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.9...v2.2.0) (2026-11-18)
+
+
+### Features
+
+* **ci:** verify a locally produced evidence record on staging pull requests ([c370a75](https://github.com/theory-cloud/theory-cloud-design/commit/c370a756b796570fe2344836b23832eeeb45cc8f))
+* **ci:** verify a locally produced evidence record on staging pull requests ([463cbce](https://github.com/theory-cloud/theory-cloud-design/commit/463cbcec84ec8ac1603a27f6b5da16718f3e5232))
+
+
+### Bug Fixes
+
+* **deps:** adopt FaceTheory v4.0.6 ([038dcfc](https://github.com/theory-cloud/theory-cloud-design/commit/038dcfca8e455f1c5fde7e29a9f853e8cd989df4))
+* **deps:** adopt FaceTheory v4.0.6 ([1f2cf71](https://github.com/theory-cloud/theory-cloud-design/commit/1f2cf712fac3cedccecf6c9e689da09f00199ba0))
+* **deps:** pin FaceTheory v5.2.0 for the contract typecheck ([d0ba319](https://github.com/theory-cloud/theory-cloud-design/commit/d0ba3198846372a04d30bfe867a9611845767821))
+* **release:** move to FaceTheory v5.2.0 and make the release lane work from the code-owner approval ([9f4a88e](https://github.com/theory-cloud/theory-cloud-design/commit/9f4a88e1931344030d04659e7a472f97d6a5f16c))
+* **release:** run promotion-hygiene from the code-owner review ([e4ae386](https://github.com/theory-cloud/theory-cloud-design/commit/e4ae38673aabc5b0952e7dab94339c5cf7474006))
+
+
+### Maintenance
+
+* **deps:** align the brand pack with the FaceTheory 4.2.0 baseline ([c28e829](https://github.com/theory-cloud/theory-cloud-design/commit/c28e8294b4019a3d57ee288ec32c4501e205abec))
+* **deps:** move the FaceTheory validation pin to v4.2.0 ([c732ac7](https://github.com/theory-cloud/theory-cloud-design/commit/c732ac718410bdb043ce7deb07e5ce59d5bb12f8))
+* **deps:** move the FaceTheory validation pin to v5.0.0 ([a57d316](https://github.com/theory-cloud/theory-cloud-design/commit/a57d3164dbb4aeb814bd41a8dc4e829c6e76acd9))
+* **deps:** move the FaceTheory validation pin to v5.0.0 ([cf94795](https://github.com/theory-cloud/theory-cloud-design/commit/cf947951c64673772cae6a2939f3cce1fecd27e5))
+* **deps:** refresh the in-cooldown @types/node pin to 24.19.0 ([c85ef3e](https://github.com/theory-cloud/theory-cloud-design/commit/c85ef3ea6bc52d1e7476b7b1fa43269196d32a78))
+* **deps:** refresh the raster toolchain pin to cairosvg 2.9.1 ([fa84741](https://github.com/theory-cloud/theory-cloud-design/commit/fa84741169ef188d37bacff244d0d1dd5970131a))
+* gitignore root .theorymcp/ materialization markers ([58b4c17](https://github.com/theory-cloud/theory-cloud-design/commit/58b4c17190d285756ab145cd671b9a16924b23b7))
+* ignore .kimi-code and root AGENTS.md materialized content ([6cc50ec](https://github.com/theory-cloud/theory-cloud-design/commit/6cc50ec1878b2e9624297cdcb1f61ea481b0d6f7))
+* ignore .kimi-code and root AGENTS.md materialized content ([7c92cc8](https://github.com/theory-cloud/theory-cloud-design/commit/7c92cc8a76c9c3f86cff7dee6f3b52721f599a4e))
+* ignore root TheoryMCP materialization markers ([d0916de](https://github.com/theory-cloud/theory-cloud-design/commit/d0916de6062bba10d11295eb8c1b212e1d89bbbf))
+* **premain:** release 2.2.0-rc.7 ([0d25e88](https://github.com/theory-cloud/theory-cloud-design/commit/0d25e882f77015975afd08e9b39fe7f04c243e24))
+* **premain:** release 2.2.0-rc.7 ([c60993d](https://github.com/theory-cloud/theory-cloud-design/commit/c60993d812873525af2bed5e29c9ffbe05981455))
+
+
+### Build System
+
+* **deps:** move the raster Pillow pin to 13.0.0 to close the advisories ([858b05e](https://github.com/theory-cloud/theory-cloud-design/commit/858b05ef71fdc8d462422b12fe3571e39479e601))
+* **deps:** pin FaceTheory v5.1.1 for the token contract typecheck ([a661a1c](https://github.com/theory-cloud/theory-cloud-design/commit/a661a1c6db906987dc1b3879015ba5c3e99e3b94))
+* **deps:** pin the raster toolchain's full resolved set ([a4c797a](https://github.com/theory-cloud/theory-cloud-design/commit/a4c797ae2ea949a70193250a1a4248539a3e9946))
+
+## [2.2.0-rc.7](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.1-rc.7...v2.2.0-rc.7) (2026-11-18)
+
+
+### Features
+
+* **ci:** verify a locally produced evidence record on staging pull requests ([c370a75](https://github.com/theory-cloud/theory-cloud-design/commit/c370a756b796570fe2344836b23832eeeb45cc8f))
+* **ci:** verify a locally produced evidence record on staging pull requests ([463cbce](https://github.com/theory-cloud/theory-cloud-design/commit/463cbcec84ec8ac1603a27f6b5da16718f3e5232))
+
+
+### Bug Fixes
+
+* **deps:** adopt FaceTheory v4.0.6 ([038dcfc](https://github.com/theory-cloud/theory-cloud-design/commit/038dcfca8e455f1c5fde7e29a9f853e8cd989df4))
+* **deps:** adopt FaceTheory v4.0.6 ([1f2cf71](https://github.com/theory-cloud/theory-cloud-design/commit/1f2cf712fac3cedccecf6c9e689da09f00199ba0))
+* **deps:** pin FaceTheory v5.2.0 for the contract typecheck ([d0ba319](https://github.com/theory-cloud/theory-cloud-design/commit/d0ba3198846372a04d30bfe867a9611845767821))
+* **release:** move to FaceTheory v5.2.0 and make the release lane work from the code-owner approval ([9f4a88e](https://github.com/theory-cloud/theory-cloud-design/commit/9f4a88e1931344030d04659e7a472f97d6a5f16c))
+* **release:** run promotion-hygiene from the code-owner review ([e4ae386](https://github.com/theory-cloud/theory-cloud-design/commit/e4ae38673aabc5b0952e7dab94339c5cf7474006))
+
+
+### Maintenance
+
+* **deps:** align the brand pack with the FaceTheory 4.2.0 baseline ([c28e829](https://github.com/theory-cloud/theory-cloud-design/commit/c28e8294b4019a3d57ee288ec32c4501e205abec))
+* **deps:** move the FaceTheory validation pin to v4.2.0 ([c732ac7](https://github.com/theory-cloud/theory-cloud-design/commit/c732ac718410bdb043ce7deb07e5ce59d5bb12f8))
+* **deps:** move the FaceTheory validation pin to v5.0.0 ([a57d316](https://github.com/theory-cloud/theory-cloud-design/commit/a57d3164dbb4aeb814bd41a8dc4e829c6e76acd9))
+* **deps:** move the FaceTheory validation pin to v5.0.0 ([cf94795](https://github.com/theory-cloud/theory-cloud-design/commit/cf947951c64673772cae6a2939f3cce1fecd27e5))
+* **deps:** refresh the in-cooldown @types/node pin to 24.19.0 ([c85ef3e](https://github.com/theory-cloud/theory-cloud-design/commit/c85ef3ea6bc52d1e7476b7b1fa43269196d32a78))
+* **deps:** refresh the raster toolchain pin to cairosvg 2.9.1 ([fa84741](https://github.com/theory-cloud/theory-cloud-design/commit/fa84741169ef188d37bacff244d0d1dd5970131a))
+* gitignore root .theorymcp/ materialization markers ([58b4c17](https://github.com/theory-cloud/theory-cloud-design/commit/58b4c17190d285756ab145cd671b9a16924b23b7))
+* ignore .kimi-code and root AGENTS.md materialized content ([6cc50ec](https://github.com/theory-cloud/theory-cloud-design/commit/6cc50ec1878b2e9624297cdcb1f61ea481b0d6f7))
+* ignore .kimi-code and root AGENTS.md materialized content ([7c92cc8](https://github.com/theory-cloud/theory-cloud-design/commit/7c92cc8a76c9c3f86cff7dee6f3b52721f599a4e))
+* ignore root TheoryMCP materialization markers ([d0916de](https://github.com/theory-cloud/theory-cloud-design/commit/d0916de6062bba10d11295eb8c1b212e1d89bbbf))
+* **main:** release 2.1.9 ([3c28f46](https://github.com/theory-cloud/theory-cloud-design/commit/3c28f461669ae52aa65716507363cd4604006db1))
+* **main:** release 2.1.9 ([f481ea3](https://github.com/theory-cloud/theory-cloud-design/commit/f481ea3b5635fa93efed89426416592816d82509))
+
+
+### Build System
+
+* **deps:** move the raster Pillow pin to 13.0.0 to close the advisories ([858b05e](https://github.com/theory-cloud/theory-cloud-design/commit/858b05ef71fdc8d462422b12fe3571e39479e601))
+* **deps:** pin FaceTheory v5.1.1 for the token contract typecheck ([a661a1c](https://github.com/theory-cloud/theory-cloud-design/commit/a661a1c6db906987dc1b3879015ba5c3e99e3b94))
+* **deps:** pin the raster toolchain's full resolved set ([a4c797a](https://github.com/theory-cloud/theory-cloud-design/commit/a4c797ae2ea949a70193250a1a4248539a3e9946))
+
 ## [2.1.9](https://github.com/theory-cloud/theory-cloud-design/compare/v2.1.8...v2.1.9) (2026-08-03)
 
 
