@@ -6,13 +6,13 @@
         "ci"
       ],
       "cwd": "ts",
-      "durationSeconds": 0.625,
+      "durationSeconds": 1.254,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-16T03:57:51Z",
+      "finishedAt": "2026-11-18T01:48:13Z",
       "id": "install",
-      "inputsDigest": "sha256:3e0695c9e64051114c3e35ccd451e52ef5df64456dc736450a30ca62fe5d0dd2",
-      "startedAt": "2026-11-16T03:57:50Z"
+      "inputsDigest": "sha256:bd7def5141860a6fbad6b17249fec14c7aa3d45a1a64bec98e10caeb78454502",
+      "startedAt": "2026-11-18T01:48:11Z"
     },
     {
       "argv": [
@@ -21,13 +21,13 @@
         "check"
       ],
       "cwd": "ts",
-      "durationSeconds": 0.649,
+      "durationSeconds": 0.616,
       "executed": true,
       "exitCode": 0,
-      "finishedAt": "2026-11-16T03:57:52Z",
+      "finishedAt": "2026-11-18T01:48:13Z",
       "id": "check",
-      "inputsDigest": "sha256:6c1ed47e7791bd7bc1767852a48ed864b75e8fddfbe5fa76cc58af17afe0dd1d",
-      "startedAt": "2026-11-16T03:57:51Z"
+      "inputsDigest": "sha256:eec37ff528fe4112f64f4367d11b538fc57bd94b644c5a81681f19fedfaf75ae",
+      "startedAt": "2026-11-18T01:48:13Z"
     }
   ],
   "consumed": [],
@@ -49,17 +49,17 @@
   },
   "profile": "linux-arm64",
   "reason": "",
-  "recordedAt": "2026-11-16T03:57:52Z",
+  "recordedAt": "2026-11-18T01:48:13Z",
   "releaseOnly": {
-    "digest": "sha256:c7c64e61c9be26a47080456d567975b7694f804901ced46875a1b3ec29d57c5a",
+    "digest": "sha256:bbe82eb2b5dcdfe95912e8eaed67fb63416fd09c329470b7eeb152791ef1fc47",
     "fileCount": 7,
-    "normalizedDigest": "sha256:9a323d6c9934430e2cd173e7515bcb5350df14e4c2d913ce4445d5e95dcfffaf",
+    "normalizedDigest": "sha256:070809b5ddc4cafb5173e6b58840f33611b6dccf50cb702e253fcb9e585327ae",
     "version": "2.1.9"
   },
   "reviews": [],
   "schemaVersion": 1,
   "scope": {
-    "digest": "sha256:43490280052cacba2f1eddc208543f65d22bd5179a901e924336de585abd67bc",
+    "digest": "sha256:1f584a0c0d88567deb7534fad73b2b3be8817bc3f8f3b624ec13359048dd3318",
     "fileCount": 16,
     "paths": [
       "ts/"
@@ -67,7 +67,7 @@
     "version": 1
   },
   "source": {
-    "digest": "sha256:7820a20cdaf1fae84ba1271ef82862977997f245ecd550d3c9c4ae1cdc7ecb0d",
+    "digest": "sha256:f7514633d2241f4b4c4e3757c28d6816851eebc1370231f6bf72223be53b5bb1",
     "fileCount": 50
   },
   "verdict": "PASS"
