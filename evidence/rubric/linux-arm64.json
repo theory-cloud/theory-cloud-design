@@ -1,0 +1,60 @@
+{
+  "commands": [],
+  "consumed": [
+    {
+      "digest": "sha256:9616120f1cf138cc5342e9023836ad91dd79e3f8cdec1113a8adc870eb333f4c",
+      "gate": "raster",
+      "profile": "linux-arm64"
+    },
+    {
+      "digest": "sha256:1f584a0c0d88567deb7534fad73b2b3be8817bc3f8f3b624ec13359048dd3318",
+      "gate": "checks",
+      "profile": "linux-arm64"
+    },
+    {
+      "digest": "sha256:33ab76319d3e306f91b962d70cf1b608655c32ccb76ce506a3bfdb2f6ca856ec",
+      "gate": "package",
+      "profile": "linux-arm64"
+    }
+  ],
+  "description": "Catch-all gate: the full local gate set for the staging pull request. Its scope is every tracked path, so an edit to the evidence tooling, the registry, the workflows or this repository's documentation stales the record and forces a fresh local run. It executes no command of its own; it composes the records of the gates it depends on.",
+  "environment": {
+    "libcairo": "1.16.0",
+    "node": "v24.22.3",
+    "platform": {
+      "arch": "aarch64",
+      "os": "linux"
+    },
+    "python": "3.11.2"
+  },
+  "gate": "rubric",
+  "kind": "source",
+  "producer": {
+    "registry": "validation-gates.json",
+    "tool": "scripts/evidence/validation_evidence.py"
+  },
+  "profile": "linux-arm64",
+  "reason": "",
+  "recordedAt": "2026-11-18T01:48:14Z",
+  "releaseOnly": {
+    "digest": "sha256:bbe82eb2b5dcdfe95912e8eaed67fb63416fd09c329470b7eeb152791ef1fc47",
+    "fileCount": 7,
+    "normalizedDigest": "sha256:070809b5ddc4cafb5173e6b58840f33611b6dccf50cb702e253fcb9e585327ae",
+    "version": "2.1.9"
+  },
+  "reviews": [],
+  "schemaVersion": 1,
+  "scope": {
+    "digest": "sha256:fb4abba8a493c9609b8d55ec2be3869912e5445a2d8ff955bdf92cac9b5d5c2e",
+    "fileCount": 57,
+    "paths": [
+      "**"
+    ],
+    "version": 1
+  },
+  "source": {
+    "digest": "sha256:f7514633d2241f4b4c4e3757c28d6816851eebc1370231f6bf72223be53b5bb1",
+    "fileCount": 50
+  },
+  "verdict": "PASS"
+}

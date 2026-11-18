@@ -1,0 +1,76 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "ts",
+      "durationSeconds": 0.259,
+      "executed": true,
+      "exitCode": 0,
+      "finishedAt": "2026-11-18T01:48:13Z",
+      "id": "build",
+      "inputsDigest": "sha256:60551d01579aa502472db57c7b5a998e433d55126d06b18e6ca03c388fa887f1",
+      "startedAt": "2026-11-18T01:48:13Z"
+    },
+    {
+      "argv": [
+        "npm",
+        "pack",
+        "--dry-run"
+      ],
+      "cwd": "ts",
+      "durationSeconds": 0.428,
+      "executed": true,
+      "exitCode": 0,
+      "finishedAt": "2026-11-18T01:48:14Z",
+      "id": "pack",
+      "inputsDigest": "sha256:24617826606c19b55bd15e02f47a147254b45f3ea0651877648d95af1bf59351",
+      "startedAt": "2026-11-18T01:48:13Z"
+    }
+  ],
+  "consumed": [],
+  "description": "Compile and stage the assets into dist, then exercise the published tarball contents",
+  "environment": {
+    "libcairo": "1.16.0",
+    "node": "v24.22.3",
+    "platform": {
+      "arch": "aarch64",
+      "os": "linux"
+    },
+    "python": "3.11.2"
+  },
+  "gate": "package",
+  "kind": "source",
+  "producer": {
+    "registry": "validation-gates.json",
+    "tool": "scripts/evidence/validation_evidence.py"
+  },
+  "profile": "linux-arm64",
+  "reason": "",
+  "recordedAt": "2026-11-18T01:48:14Z",
+  "releaseOnly": {
+    "digest": "sha256:bbe82eb2b5dcdfe95912e8eaed67fb63416fd09c329470b7eeb152791ef1fc47",
+    "fileCount": 7,
+    "normalizedDigest": "sha256:070809b5ddc4cafb5173e6b58840f33611b6dccf50cb702e253fcb9e585327ae",
+    "version": "2.1.9"
+  },
+  "reviews": [],
+  "schemaVersion": 1,
+  "scope": {
+    "digest": "sha256:33ab76319d3e306f91b962d70cf1b608655c32ccb76ce506a3bfdb2f6ca856ec",
+    "fileCount": 28,
+    "paths": [
+      "ts/",
+      "assets/"
+    ],
+    "version": 1
+  },
+  "source": {
+    "digest": "sha256:f7514633d2241f4b4c4e3757c28d6816851eebc1370231f6bf72223be53b5bb1",
+    "fileCount": 50
+  },
+  "verdict": "PASS"
+}

@@ -1,0 +1,131 @@
+name: Promotion hygiene
+
+# Nothing enters premain or main except a pull request from the accepted head in
+# this repository. The check needs only the GitHub pull request context: it
+# checks out no code, runs no repository command and carries no secret or
+# credential, so it cannot be influenced by the pull request's content.
+#
+# Accepted heads:
+#   - the pull request's head repository must be this repository, so a fork
+#     branch named like an accepted head cannot pass by name;
+#   - premain accepts `staging`, the integration branch, and
+#     `release-please--branches--premain`, the release candidate branch that
+#     release-please opens against premain;
+#   - main accepts `premain`, and `release-please--branches--main`, the stable
+#     release branch that release-please opens against main.
+#
+# GitHub satisfies a required status check only when the run that reported it
+# was started by push, pull_request, pull_request_review, pull_request_target,
+# deployment or deployment_status. Two of those events start this check, and
+# the job id `promotion-hygiene` -- the required context name -- is the same in
+# both:
+#
+#   pull_request. A promotion pull request: staging into premain, or premain
+#   into main. GitHub runs a pull_request workflow from the pull request's merge
+#   ref, so the head branch's version of this workflow applies and the promotion
+#   already carries this check. A pull request that edits or deletes the
+#   workflow fails closed: the edit is in the diff a code owner must approve,
+#   and a deleted check never reports.
+#
+#   pull_request_review. The eligible event for a generated release pull
+#   request. release-please opens and updates its release candidate and stable
+#   pull requests with the built-in `GITHUB_TOKEN`, and GitHub starts no
+#   pull_request workflow for events that token causes, so such a pull request
+#   gets no pull_request run. The code-owner approval the premain and main
+#   rulesets already require is the eligible event that can start this check: a
+#   submitted review starts this workflow for the reviewed pull request, needs
+#   no credential, and adds no human step beyond the approval the ruleset
+#   demands anyway.
+#
+# The head rule reads the pull request from `github.event.pull_request.*` for
+# both events. That is deliberate: a pull_request_review run sets neither
+# `GITHUB_BASE_REF`/`GITHUB_HEAD_REF` nor `github.base_ref`/`github.head_ref`
+# (its `GITHUB_REF_NAME` is `<n>/merge`), so a rule that read those would fail
+# every approval, or pass without checking anything. Any other event, and an
+# empty base or head value, fails closed with a named reason.
+on:
+  pull_request:
+    branches: ["premain", "main"]
+  pull_request_review:
+    types: [submitted]
+    branches: [premain, main]
+
+permissions: {}
+
+jobs:
+  promotion-hygiene:
+    name: promotion-hygiene
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require an accepted head branch from this repository
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_BRANCH: ${{ github.event.pull_request.base.ref }}
+          PR_HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+          PR_HEAD_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
+          BASE_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          # One head rule for both events. A pull_request and a
+          # pull_request_review both name the pull request they run for; only
+          # the event-specific ref variables differ, so neither is read here.
+          case "${EVENT_NAME:-}" in
+            pull_request | pull_request_review)
+              ;;
+            *)
+              echo "promotion-hygiene: FAIL (unexpected event '${EVENT_NAME:-<empty>}')" >&2
+              exit 1
+              ;;
+          esac
+
+          if [ -z "${PR_BASE_BRANCH:-}" ]; then
+            echo "promotion-hygiene: FAIL (the pulled-into branch is empty for event '${EVENT_NAME}')" >&2
+            exit 1
+          fi
+          if [ -z "${PR_HEAD_BRANCH:-}" ]; then
+            echo "promotion-hygiene: FAIL (the pulled-from branch is empty for event '${EVENT_NAME}')" >&2
+            exit 1
+          fi
+          if [ -z "${PR_HEAD_REPOSITORY:-}" ]; then
+            echo "promotion-hygiene: FAIL (the head repository is empty for event '${EVENT_NAME}'; a deleted fork, or an incomplete event, cannot pass)" >&2
+            exit 1
+          fi
+
+          integration_branch='staging'
+          release_branch='premain'
+          main_branch='main'
+
+          if [ "${PR_HEAD_REPOSITORY}" != "${BASE_REPOSITORY:-}" ]; then
+            echo "promotion-hygiene: FAIL (head repository '${PR_HEAD_REPOSITORY}' is not '${BASE_REPOSITORY:-<unknown>}')" >&2
+            echo "A head branch name is not enough: a fork branch named like an accepted head must not pass." >&2
+            echo "A fork contribution targets a pre-arranged branch agreed with the code owners; a code owner then carries it to ${integration_branch} with locally produced evidence." >&2
+            exit 1
+          fi
+
+          case "${PR_BASE_BRANCH}" in
+            "${release_branch}")
+              accepted="${integration_branch} release-please--branches--premain"
+              ;;
+            "${main_branch}")
+              accepted="${release_branch} release-please--branches--main"
+              ;;
+            *)
+              echo "promotion-hygiene: FAIL (unexpected base branch '${PR_BASE_BRANCH}')" >&2
+              exit 1
+              ;;
+          esac
+
+          for head in ${accepted}; do
+            if [ "${PR_HEAD_BRANCH}" = "${head}" ]; then
+              echo "promotion-hygiene: PASS (${PR_BASE_BRANCH} <- ${PR_HEAD_BRANCH})"
+              exit 0
+            fi
+          done
+
+          echo "promotion-hygiene: FAIL (${PR_BASE_BRANCH} <- ${PR_HEAD_BRANCH})" >&2
+          echo "Nothing enters ${PR_BASE_BRANCH} except a pull request from: ${accepted}." >&2
+          echo "A fork contribution targets a pre-arranged branch agreed with the code owners; a code owner then carries it to ${integration_branch} with locally produced evidence." >&2
+          exit 1
