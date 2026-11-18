@@ -7,12 +7,12 @@
       "profile": "linux-arm64"
     },
     {
-      "digest": "sha256:1f584a0c0d88567deb7534fad73b2b3be8817bc3f8f3b624ec13359048dd3318",
+      "digest": "sha256:43a1b40d639e319e66a5cdcb162d56bb8310648fc83cb0c211880cc08a0f3d6d",
       "gate": "checks",
       "profile": "linux-arm64"
     },
     {
-      "digest": "sha256:33ab76319d3e306f91b962d70cf1b608655c32ccb76ce506a3bfdb2f6ca856ec",
+      "digest": "sha256:88c7cbf774cd20b5a5e1db6e9507177ed6b5aeae8ec3ca7d1c0499387c35663e",
       "gate": "package",
       "profile": "linux-arm64"
     }
@@ -35,17 +35,17 @@
   },
   "profile": "linux-arm64",
   "reason": "",
-  "recordedAt": "2026-11-18T01:48:14Z",
+  "recordedAt": "2026-11-18T02:21:10Z",
   "releaseOnly": {
-    "digest": "sha256:bbe82eb2b5dcdfe95912e8eaed67fb63416fd09c329470b7eeb152791ef1fc47",
+    "digest": "sha256:64631e0586fc906466451db1de3af5933943e1bd639e99adcf40ba814b513071",
     "fileCount": 7,
-    "normalizedDigest": "sha256:070809b5ddc4cafb5173e6b58840f33611b6dccf50cb702e253fcb9e585327ae",
-    "version": "2.1.9"
+    "normalizedDigest": "sha256:0694a6dfd2f031ab8db456db2fa228ac99b01a52348b1b6c4e8f112348eeaeac",
+    "version": "2.2.0"
   },
   "reviews": [],
   "schemaVersion": 1,
   "scope": {
-    "digest": "sha256:fb4abba8a493c9609b8d55ec2be3869912e5445a2d8ff955bdf92cac9b5d5c2e",
+    "digest": "sha256:10cc208ab12fa79084279969f7fc2abbf1cb177d5767b837a5de4af0f7ba52f5",
     "fileCount": 57,
     "paths": [
       "**"
