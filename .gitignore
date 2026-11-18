@@ -3,3 +3,7 @@
 .mcp.json
 .agents/
 GEMINI.md
+.theorymcp/
+.kimi-code/
+/AGENTS.md
+__pycache__/

@@ -28,7 +28,7 @@ but consumers do not need to update the design pack just because
 FaceTheory ships a new release.
 
 ```bash
-export THEORY_CLOUD_DESIGN_VERSION=2.1.9 # x-release-please-version
+export THEORY_CLOUD_DESIGN_VERSION=2.2.0-rc.7 # x-release-please-version
 
 npm install --save-exact \
   "https://github.com/theory-cloud/theory-cloud-design/releases/download/v${THEORY_CLOUD_DESIGN_VERSION}/theory-cloud-design-${THEORY_CLOUD_DESIGN_VERSION}.tgz"
@@ -38,7 +38,7 @@ FaceTheory-based applications still pin FaceTheory directly because
 their shell primitives live there:
 
 ```bash
-export THEORY_CLOUD_FACETHEORY_VERSION=4.0.5
+export THEORY_CLOUD_FACETHEORY_VERSION=5.2.0
 
 npm install --save-exact \
   "https://github.com/theory-cloud/FaceTheory/releases/download/v${THEORY_CLOUD_FACETHEORY_VERSION}/theory-cloud-facetheory-${THEORY_CLOUD_FACETHEORY_VERSION}.tgz"
@@ -119,9 +119,16 @@ make install     # npm ci inside ts/
 make assets      # regenerate raster assets from SVG masters
 make build       # tsc + stage assets into ts/dist/
 make typecheck   # tsc --noEmit
-make check       # typecheck (placeholder for lint + tests)
+make check       # typecheck + the FaceTheory StitchTokenSet contract typecheck
 make pack        # npm pack --dry-run inside ts/
+make rubric      # produce the evidence records in the pinned Linux producer
+make verify-evidence   # verify the committed records (what CI runs)
 ```
+
+Gates are verified once, locally, on the pull request into `staging`:
+`make rubric` writes the records under `evidence/`, and CI only re-derives
+their input digests, so a stale or missing record fails with "produce evidence
+locally". See `scripts/evidence/README.md`.
 
 The raster pipeline uses `cairosvg` and `Pillow` (Python). SVG stays
 the authoring format; rasters are always regenerated from the vector
