@@ -35,7 +35,7 @@
   },
   "profile": "linux-arm64",
   "reason": "",
-  "recordedAt": "2026-11-18T02:21:10Z",
+  "recordedAt": "2026-11-24T14:39:49Z",
   "releaseOnly": {
     "digest": "sha256:64631e0586fc906466451db1de3af5933943e1bd639e99adcf40ba814b513071",
     "fileCount": 7,
@@ -45,7 +45,7 @@
   "reviews": [],
   "schemaVersion": 1,
   "scope": {
-    "digest": "sha256:10cc208ab12fa79084279969f7fc2abbf1cb177d5767b837a5de4af0f7ba52f5",
+    "digest": "sha256:ba6efe78b5090cb948d0c2a71d68c4331d3bead870c0b8861fbd3fc601409f66",
     "fileCount": 57,
     "paths": [
       "**"
@@ -53,7 +53,7 @@
     "version": 1
   },
   "source": {
-    "digest": "sha256:f7514633d2241f4b4c4e3757c28d6816851eebc1370231f6bf72223be53b5bb1",
+    "digest": "sha256:693284fb85858e223af4412b0e921c4566cad059a699cd0d444c239cd984441e",
     "fileCount": 50
   },
   "verdict": "PASS"
